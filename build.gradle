@@ -1,0 +1,23 @@
+group 'cn.gridx'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'maven'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile gradleApi()
+    compile 'com.amazonaws:aws-java-sdk:1.9.6'
+}
+
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri('build/repo'))
+        }
+    }
+}
