@@ -10,7 +10,10 @@ import scala.collection.mutable.ArrayBuffer
 
 /**
   * Created by tao on 9/22/16.
-  * We can upload a local folder or a local file to S3
+  *
+  * <p> We can upload a local folder or a local file to S3
+  *
+  *
   */
 class S3SyncTask extends DefaultTask {
   var accessKey   : String  = null
